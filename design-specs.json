@@ -1,0 +1,594 @@
+{
+  "project": {
+    "name": "AP-group Hero Section",
+    "version": "1.0.0",
+    "description": "Premium, futuristic hero section for modern AI/tech consultancy",
+    "inspiration": "Junni (https://next.junni.co.jp)"
+  },
+  "viewport": {
+    "desktop": {
+      "width": 1920,
+      "height": 1080,
+      "dpi": 72,
+      "devicePixelRatio": 2
+    },
+    "tablet": {
+      "width": 768,
+      "height": 1024,
+      "dpi": 72,
+      "devicePixelRatio": 2
+    },
+    "mobile": {
+      "width": 375,
+      "height": 812,
+      "dpi": 72,
+      "devicePixelRatio": 3
+    },
+    "preview_settings": {
+      "default_view": "desktop",
+      "show_grid": false,
+      "show_rulers": true,
+      "snap_to_grid": false
+    }
+  },
+  "design_system": {
+    "colors": {
+      "background": {
+        "primary": "#0F1115",
+        "overlay": "rgba(15, 17, 21, 0.8)",
+        "description": "Dark graphite base with subtle depth"
+      },
+      "accents": {
+        "forest_green": {
+          "hex": "#1F6F54",
+          "rgb": "31, 111, 84",
+          "usage": "Primary brand color, 3D mesh base"
+        },
+        "teal": {
+          "hex": "#2DD4BF",
+          "rgb": "45, 212, 191",
+          "usage": "Accent highlights, glow effects, wave peaks"
+        },
+        "secondary_green": {
+          "hex": "#1a5a43",
+          "rgb": "26, 90, 67",
+          "usage": "Button gradients, depth variations"
+        }
+      },
+      "text": {
+        "primary": "#FFFFFF",
+        "secondary": "#A1A1AA",
+        "muted": "#52525B"
+      },
+      "ui": {
+        "border": "rgba(255, 255, 255, 0.05)",
+        "border_hover": "rgba(255, 255, 255, 0.1)",
+        "divider": "rgba(255, 255, 255, 0.1)"
+      }
+    },
+    "typography": {
+      "font_family": {
+        "primary": "Inter",
+        "fallback": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "weights": [400, 500, 600, 700, 800]
+      },
+      "scale": {
+        "headline": {
+          "size_desktop": "5.5rem",
+          "size_tablet": "4rem",
+          "size_mobile": "2.5rem",
+          "weight": 800,
+          "line_height": 1.1,
+          "letter_spacing": "-0.03em"
+        },
+        "subheadline": {
+          "size_desktop": "1.25rem",
+          "size_tablet": "1.125rem",
+          "size_mobile": "1rem",
+          "weight": 400,
+          "line_height": 1.6,
+          "letter_spacing": "0"
+        },
+        "button": {
+          "size": "1rem",
+          "weight": 600,
+          "letter_spacing": "0"
+        },
+        "tagline": {
+          "size": "0.875rem",
+          "weight": 500,
+          "letter_spacing": "0.05em",
+          "text_transform": "uppercase"
+        },
+        "nav": {
+          "wordmark_size": "1.25rem",
+          "wordmark_weight": 700,
+          "link_size": "0.95rem",
+          "link_weight": 500
+        }
+      }
+    },
+    "spacing": {
+      "section_padding": "4rem",
+      "content_max_width": "900px",
+      "button_gap": "1rem",
+      "element_spacing": {
+        "headline_to_subheadline": "1.5rem",
+        "subheadline_to_buttons": "3rem",
+        "buttons_to_divider": "4rem",
+        "divider_to_tagline": "2rem"
+      }
+    },
+    "effects": {
+      "backdrop_blur": "12px",
+      "glow_blur": "80px",
+      "shadows": {
+        "button_primary": "0 4px 20px rgba(31, 111, 84, 0.3)",
+        "button_primary_hover": "0 8px 30px rgba(31, 111, 84, 0.4)",
+        "text_glow": "0 0 80px rgba(31, 111, 84, 0.3)"
+      }
+    }
+  },
+  "layout": {
+    "navigation": {
+      "position": "fixed",
+      "height": "auto",
+      "padding_vertical": "2rem",
+      "padding_horizontal": "4rem",
+      "backdrop_blur": true,
+      "border_bottom": "1px solid rgba(255, 255, 255, 0.05)",
+      "elements": {
+        "wordmark": {
+          "position": "left",
+          "text": "AP-group",
+          "gradient": "linear-gradient(135deg, #FFFFFF 0%, #A1A1AA 100%)"
+        },
+        "links": {
+          "position": "right",
+          "items": [
+            {
+              "label": "Contact",
+              "href": "#contact",
+              "hover_effect": "underline_from_left"
+            }
+          ]
+        }
+      }
+    },
+    "hero": {
+      "height": "100vh",
+      "alignment": "center",
+      "content": {
+        "max_width": "900px",
+        "text_align": "center",
+        "z_index": 10,
+        "animation": "fadeInUp 1.2s ease-out"
+      },
+      "elements": [
+        {
+          "type": "headline",
+          "text": "We build systems that scale.",
+          "line_break": true,
+          "animation_delay": "0.2s"
+        },
+        {
+          "type": "subheadline",
+          "text": "Strategy, technology and execution for teams that want results — not noise.",
+          "line_break": true,
+          "animation_delay": "0.4s"
+        },
+        {
+          "type": "button_group",
+          "layout": "horizontal",
+          "gap": "1rem",
+          "animation_delay": "0.6s",
+          "buttons": [
+            {
+              "label": "Start a project",
+              "style": "primary",
+              "variant": "filled",
+              "color": "#1F6F54",
+              "gradient": "linear-gradient(135deg, #1F6F54 0%, #1a5a43 100%)"
+            },
+            {
+              "label": "View approach",
+              "style": "secondary",
+              "variant": "outline",
+              "border": "2px solid rgba(255, 255, 255, 0.2)"
+            }
+          ]
+        },
+        {
+          "type": "divider",
+          "width": "100%",
+          "height": "1px",
+          "gradient": "linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 20%, rgba(31, 111, 84, 0.3) 50%, rgba(255, 255, 255, 0.1) 80%, transparent 100%)",
+          "animation_delay": "0.8s"
+        },
+        {
+          "type": "tagline",
+          "text": "Trusted by product teams and founders across Europe",
+          "animation_delay": "1s"
+        }
+      ]
+    }
+  },
+  "3d_visual": {
+    "type": "parametric_wave_mesh",
+    "description": "Floating 3D abstract geometric mesh with organic wave motion",
+    "implementation": {
+      "technology": "HTML5 Canvas / WebGL",
+      "framework_suggestions": ["Three.js", "Babylon.js", "Custom Canvas 2D"],
+      "performance_target": "60fps"
+    },
+    "mesh_properties": {
+      "grid_size": {
+        "rows": 25,
+        "columns": 25,
+        "spacing": 30
+      },
+      "wave_function": {
+        "type": "parametric",
+        "formulas": [
+          "sin(x * 0.003 + time * 0.5) * 80",
+          "cos(y * 0.003 + time * 0.7) * 64",
+          "sin((x + y) * 0.0015 + time * 0.3) * 40"
+        ],
+        "amplitude_range": [40, 80],
+        "frequency": 0.003,
+        "animation_speed": 0.02
+      },
+      "rendering": {
+        "particle_size": "1.5px (scaled by depth)",
+        "connection_lines": true,
+        "line_width": 1,
+        "line_color": "rgba(31, 111, 84, 0.15)",
+        "depth_projection": true,
+        "perspective_distance": 600
+      }
+    },
+    "colors": {
+      "base_color": "#1F6F54",
+      "peak_color": "#2DD4BF",
+      "interpolation": "depth_and_wave_based",
+      "opacity_range": [0.3, 0.8]
+    },
+    "effects": {
+      "glow": {
+        "enabled": true,
+        "trigger": "wave peaks > 50",
+        "color": "rgba(45, 212, 191, 0.3)",
+        "radius": "4x particle size"
+      },
+      "atmospheric_glow_orbs": [
+        {
+          "size": "600px",
+          "color": "#1F6F54",
+          "blur": "80px",
+          "opacity": 0.4,
+          "position": "top-left (20%, 10%)",
+          "animation": "float 8s ease-in-out infinite"
+        },
+        {
+          "size": "500px",
+          "color": "#2DD4BF",
+          "blur": "80px",
+          "opacity": 0.4,
+          "position": "bottom-right (15%, 15%)",
+          "animation": "float 8s ease-in-out infinite (2s delay)"
+        }
+      ],
+      "light_rays": {
+        "count": 3,
+        "rotation_speed": 0.1,
+        "gradient": "radial from center",
+        "color": "rgba(31, 111, 84, 0.15) to transparent"
+      },
+      "motion_blur": {
+        "enabled": true,
+        "method": "frame_persistence",
+        "opacity": 0.3
+      }
+    },
+    "interactions": {
+      "mouse_parallax": {
+        "enabled": true,
+        "strength": 30,
+        "axis": "both"
+      },
+      "scroll_parallax": {
+        "enabled": false
+      }
+    }
+  },
+  "animations": {
+    "page_load": [
+      {
+        "element": "hero_content",
+        "animation": "fadeInUp",
+        "duration": "1.2s",
+        "easing": "ease-out",
+        "delay": "0s"
+      },
+      {
+        "element": "headline",
+        "animation": "fadeInUp",
+        "duration": "1.2s",
+        "easing": "ease-out",
+        "delay": "0.2s"
+      },
+      {
+        "element": "subheadline",
+        "animation": "fadeInUp",
+        "duration": "1.2s",
+        "easing": "ease-out",
+        "delay": "0.4s"
+      },
+      {
+        "element": "buttons",
+        "animation": "fadeInUp",
+        "duration": "1.2s",
+        "easing": "ease-out",
+        "delay": "0.6s"
+      },
+      {
+        "element": "divider",
+        "animation": "fadeInUp",
+        "duration": "1.2s",
+        "easing": "ease-out",
+        "delay": "0.8s"
+      },
+      {
+        "element": "tagline",
+        "animation": "fadeInUp",
+        "duration": "1.2s",
+        "easing": "ease-out",
+        "delay": "1s"
+      }
+    ],
+    "hover_effects": {
+      "buttons": {
+        "transform": "translateY(-2px)",
+        "shadow_increase": true,
+        "ripple_effect": true,
+        "duration": "0.3s"
+      },
+      "nav_link": {
+        "color_transition": "0.3s",
+        "underline_animation": "expand from left"
+      }
+    },
+    "continuous": {
+      "glow_orbs": {
+        "animation": "float",
+        "duration": "8s",
+        "easing": "ease-in-out",
+        "infinite": true
+      },
+      "3d_mesh": {
+        "wave_motion": "continuous",
+        "rotation": false,
+        "time_based": true
+      }
+    }
+  },
+  "figma_implementation": {
+    "layers": [
+      {
+        "name": "Background",
+        "type": "rectangle",
+        "fill": "#0F1115"
+      },
+      {
+        "name": "Glow Orb 1",
+        "type": "ellipse",
+        "size": "600x600",
+        "fill": "radial_gradient",
+        "effects": ["blur_80px"],
+        "opacity": 0.4
+      },
+      {
+        "name": "Glow Orb 2",
+        "type": "ellipse",
+        "size": "500x500",
+        "fill": "radial_gradient",
+        "effects": ["blur_80px"],
+        "opacity": 0.4
+      },
+      {
+        "name": "3D Mesh Placeholder",
+        "type": "frame",
+        "note": "Replace with WebGL or canvas export",
+        "size": "1920x1080"
+      },
+      {
+        "name": "Navigation",
+        "type": "frame",
+        "auto_layout": "horizontal",
+        "padding": "32px 64px",
+        "effects": ["backdrop_blur_12px"]
+      },
+      {
+        "name": "Hero Content",
+        "type": "auto_layout",
+        "direction": "vertical",
+        "alignment": "center",
+        "spacing": "as_per_design_system"
+      }
+    ],
+    "components": {
+      "button_primary": {
+        "auto_layout": true,
+        "padding": "16px 40px",
+        "fill": "linear_gradient",
+        "corner_radius": 8,
+        "effects": ["drop_shadow"]
+      },
+      "button_secondary": {
+        "auto_layout": true,
+        "padding": "16px 40px",
+        "stroke": "2px",
+        "corner_radius": 8,
+        "effects": ["backdrop_blur"]
+      }
+    },
+    "text_styles": {
+      "Hero/Headline": {
+        "font": "Inter",
+        "size": 88,
+        "weight": 800,
+        "line_height": "110%",
+        "letter_spacing": "-3%",
+        "fill": "linear_gradient"
+      },
+      "Hero/Subheadline": {
+        "font": "Inter",
+        "size": 20,
+        "weight": 400,
+        "line_height": "160%"
+      },
+      "Button/Text": {
+        "font": "Inter",
+        "size": 16,
+        "weight": 600
+      },
+      "Nav/Wordmark": {
+        "font": "Inter",
+        "size": 20,
+        "weight": 700
+      }
+    },
+    "effects": {
+      "Backdrop Blur 12": {
+        "type": "layer_blur",
+        "value": 12
+      },
+      "Glow 80": {
+        "type": "layer_blur",
+        "value": 80
+      },
+      "Button Shadow": {
+        "type": "drop_shadow",
+        "x": 0,
+        "y": 4,
+        "blur": 20,
+        "color": "rgba(31, 111, 84, 0.3)"
+      }
+    }
+  },
+  "webgl_implementation": {
+    "library": "Three.js (recommended)",
+    "scene_setup": {
+      "renderer": {
+        "antialias": true,
+        "alpha": true,
+        "device_pixel_ratio": "window.devicePixelRatio"
+      },
+      "camera": {
+        "type": "PerspectiveCamera",
+        "fov": 75,
+        "near": 0.1,
+        "far": 1000,
+        "position": [0, 0, 600]
+      },
+      "scene": {
+        "background": "transparent",
+        "fog": false
+      }
+    },
+    "geometry": {
+      "type": "PlaneGeometry or custom BufferGeometry",
+      "segments": [25, 25],
+      "size": [750, 750],
+      "vertex_shader_displacement": true
+    },
+    "material": {
+      "type": "ShaderMaterial",
+      "uniforms": {
+        "uTime": "float",
+        "uMouse": "vec2",
+        "uColorBase": "vec3(31, 111, 84) / 255",
+        "uColorAccent": "vec3(45, 212, 191) / 255"
+      },
+      "wireframe": true,
+      "transparent": true
+    },
+    "shader_suggestions": {
+      "vertex_shader": "Apply sin/cos wave functions to vertex positions based on uTime",
+      "fragment_shader": "Color interpolation based on vertex height and depth"
+    },
+    "post_processing": {
+      "bloom": {
+        "enabled": true,
+        "strength": 0.5,
+        "radius": 0.4,
+        "threshold": 0.85
+      },
+      "god_rays": {
+        "enabled": true,
+        "samples": 60
+      }
+    }
+  },
+  "accessibility": {
+    "keyboard_navigation": true,
+    "focus_indicators": {
+      "color": "#1F6F54",
+      "width": "2px",
+      "offset": "4px"
+    },
+    "reduced_motion": {
+      "respect_prefers_reduced_motion": true,
+      "fallback": "static or minimal animation"
+    },
+    "contrast_ratios": {
+      "headline_background": "11:1 (AAA)",
+      "subheadline_background": "7:1 (AA)",
+      "button_text": "4.5:1 (AA)"
+    },
+    "semantic_html": true,
+    "aria_labels": true
+  },
+  "performance": {
+    "target_fps": 60,
+    "optimization_techniques": [
+      "RequestAnimationFrame for animations",
+      "Canvas/WebGL for 3D rendering",
+      "GPU-accelerated transforms",
+      "Lazy loading for non-critical assets",
+      "Debounced resize handlers"
+    ],
+    "asset_optimization": {
+      "fonts": "Preload critical fonts",
+      "images": "WebP with fallbacks",
+      "scripts": "Defer non-critical JS"
+    }
+  },
+  "export_formats": {
+    "figma": {
+      "file_type": ".fig",
+      "artboards": ["Desktop 1920x1080", "Tablet 768x1024", "Mobile 375x812"]
+    },
+    "code": {
+      "html": "index.html",
+      "css": "styles.css",
+      "javascript": "hero-animation.js"
+    },
+    "assets": {
+      "favicon": "Required",
+      "og_image": "1200x630 (social media)",
+      "touch_icons": "Multiple sizes"
+    }
+  },
+  "notes": {
+    "design_philosophy": "Premium minimalism with subtle complexity in the 3D element",
+    "technical_approach": "Progressive enhancement - static fallback for older browsers",
+    "brand_alignment": "Tech-forward, trustworthy, results-oriented",
+    "future_considerations": [
+      "A/B testing CTA button copy",
+      "Video background alternative",
+      "Interactive mesh responding to audio",
+      "Dark/light mode toggle"
+    ]
+  }
+}
